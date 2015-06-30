@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - '0.10'
+before_script:
+  - npm install --quiet -g grunt-cli karma
+  - npm install
+script: grunt build
+after_success: ./publish.sh
+evn:
+  global:
+    - GH_REF: github.com/zeusjs/lightning.git
+    - secure: ZKh8TZXHyJRdh+JlfR7AkOJqBEWyyk+2x5HIKl2gzWpmbdthaEHyZEczRKfMF+GIxWq6dB/DV+wLTTq73LB4+rk1iBwhpoyoM9YVWZs813IIbLaS5mlZNT2sFbjQEaga2pziIEptYJSVuEFtXDx0+pGSND/RcWMo1NOQoOp7ww51VpZp3En2H8UmpGmk4FnoWeb7JnEk1x8Fgr8xYyjNOlGfN47k8WMU6AYdQbhZxiKTxwdHmJORGD2llba+pRC4J9NVd+4WPHvk0MMcmjdx+RJdaO6yLb5yb7ghfiKSmo7B8y2RcWHFwHmc04x61nHAJP8onWPHXXeYvVlZA7EWOlaB+RNhZvk9eestMndxZLrIUoVWK5AVTliTteI8iiXq4hQk4624EuwMfqFseXoympmRJ1APIJHXg/PjiT1sNGzEn1RByAEy3o07MK4tDwLZG9MZJQfmQNb7aMdI6vnBgZhO30J9vaadWlDzvFaW43AGZIQQBNTKm+p6IDTjI9r1EgEYErX+V9/8+hql8aHvpWVPTnvzGzA7nZmkMwXQDf3qZyzYc49qzubMFDgd0mjdydMUEL+oh8hBSkmSW3WO5HwpWrxzWT5X7oquo0QM9s1X9pm3QTHLiIuJKZ5GnYisUIGw8YTjxJgUYgnXOIPs2Vz70YLe9wgpxZAZmFSeO2Q=
