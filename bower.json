@@ -1,0 +1,29 @@
+{
+  "name": "lightning",
+  "version": "0.1.0",
+  "homepage": "https://github.com/zeusjs/lightning",
+  "authors": [
+    "Amey Sakhadeo <me@ameyms.com>"
+  ],
+  "description": "A set of useful SASS mixins and components built over Bootstrap",
+  "main": "dist/lightning.css",
+  "keywords": [
+    "css",
+    "bootstrap",
+    "responsive",
+    "styles",
+    "sass",
+    "scss"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5"
+  }
+}
