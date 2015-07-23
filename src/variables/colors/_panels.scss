@@ -1,0 +1,12 @@
+
+// Panels
+$color_panel_header_bg: #f0f0f0; //#; e4ecf2 //#edf3f5
+$color_panel_heading_text: #444;
+$color_panel_borders: darken($color_panel_header_bg, 10%); //#d0d0d0;
+$color_panel_shadow: darken($color_view_bg, 5%);
+
+
+
+$color_panel_subtabs_bg: #dee8f0; //#e3ded6;
+$color_panel_subtabs_border: darken($color_panel_subtabs_bg, 10%);
+$color_panel_subtabs_selected_border: $color_base_theme;

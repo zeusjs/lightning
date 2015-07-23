@@ -1,0 +1,77 @@
+$brand-caution: $color_orange;
+$btn-caution-color: #FFF !default;
+$btn-caution-bg: $brand-caution !default;
+$btn-caution-border: darken($btn-caution-bg, 5%) !default;
+
+
+.btn-caution
+{
+  @include button-variant($btn-caution-color, $btn-caution-bg, $btn-caution-border);
+}
+
+//NEW BOOTSTRAP EXTENSION GRID COLUMN FOR EXTRA LARGE SCREENS
+
+$screen-xl:                  1600px;
+$screen-xl-min:              $screen-xl;
+
+$screen-lg-max: $screen-xl-min - 1;
+
+$container-xlarge-desktop:      ((1540px + $grid-gutter-width));
+$container-xl:                 $container-xlarge-desktop;
+
+.container {
+  @media (min-width: $screen-xl-min) {
+    width: $container-xl;
+  }
+}
+
+@mixin make-grid-xlcolumns() {
+  $list: '';
+  $i: 1;
+  $list: ".col-xl-#{$i}";
+  @for $i from (1 + 1) through $grid-columns {
+    $list: "#{$list}, .col-xl-#{$i}";
+  }
+  #{$list} {
+    position: relative;
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+    // Inner gutter via padding
+    padding-left:  ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+  }
+}
+@include make-grid-xlcolumns();
+@media (min-width: $screen-xl-min) {
+    @include make-grid(xl);
+}
+
+// Generate the large columns
+@mixin make-xl-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+
+  @media (min-width: $screen-xl-min) {
+    float: left;
+    width: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-xl-column-offset($columns) {
+  @media (min-width: $screen-xl-min) {
+    margin-left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-xl-column-push($columns) {
+  @media (min-width: $screen-xl-min) {
+    left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-xl-column-pull($columns) {
+  @media (min-width: $screen-xl-min) {
+    right: percentage(($columns / $grid-columns));
+  }
+}
+
+//EXTRA LARGE SCREEN EXTENSION END

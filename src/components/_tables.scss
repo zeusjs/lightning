@@ -1,0 +1,89 @@
+/* XS */
+@media screen and (max-width: $screen-xs-max)
+{
+    table.responsive-table
+    {
+
+        display: block;
+        padding: 0px 0px 10px 0px;
+        thead
+        {
+            display: none;
+        }
+
+        tbody
+        {
+            width: 100%;
+            display: block;
+
+            tr
+            {
+                display: block;
+                border: none;
+                position: relative;
+                background-color: transparent;
+                padding: 0px 80px 10px 0px;
+
+                &:not(:last-child)
+                {
+                    border-bottom: 1px solid $color_panel_header_bg;
+                }
+                td
+                {
+                    background-color: transparent;
+                    display: block;
+                    border: none;
+                    margin: 0px;
+                    padding: 10px 0px 0px 10px;
+
+                    &.primary-attr
+                    {
+                        .mobileColumnHeader
+                        {
+                            display: none;
+                        }
+                        font-weight: 400;
+                        font-size: 1.01em;
+                        display: block;
+                        width: 100%;
+                    }
+                    &.secondary-attr
+                    {
+                        display: block;
+                        .progress
+                        {
+                            height: 10px;
+                        }
+                    }
+                    &.extra-attr
+                    {
+                        display: block;
+                        color: $color_gray_dark;
+                        font-size: 0.9em;
+
+                        &:last-child::after
+                        {
+                            content: "";
+                        }
+                        &::after
+                        {
+                            display: inline;
+                            content: "";
+                            margin: 0px;
+                        }
+                    }
+
+                    &.table-cell-graph
+                    {
+
+                        display: block;
+                        position: absolute;
+                        right: 10px;
+                        top: 0%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@function text_color($bgcolor)
+{
+
+    @if lightness($bgcolor) >= 61%
+    {
+        @return $color_gray_darker;
+    }
+    @else
+    {
+        @return $color_white;
+    }
+}

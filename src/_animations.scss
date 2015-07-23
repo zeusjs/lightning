@@ -1,0 +1,38 @@
+@keyframes loading_bar_pulsating_glow
+{
+    from {
+        box-shadow: 1px 0px 4px 1px lighten($color_directive_global_loading_bar, 30%);
+    }
+    to {
+        box-shadow: 1px 0px 15px 1px lighten($color_directive_global_loading_bar, 30%);
+    }
+
+}
+
+
+// Login screen
+@keyframes async_btn_spinner_dots
+{
+  0%, 80%, 100% {
+    transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+  }
+}
+
+
+@keyframes login_form_failure_shake
+{
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
+
+@include keyframes_prop_animation_generator( 'rainbow_bottom_border', 'border-bottom-color',
+    $color_purple, $color_blue, $color_blue_light, $color_green_light, $color_yellow,
+    $color_amber, $color_orange, $color_orange_deep, $color_red);
+
+@include keyframes_prop_animation_generator( 'rainbow_text_color', 'color',
+    $color_purple, $color_blue, $color_blue_light, $color_green_light, $color_yellow,
+    $color_amber, $color_orange, $color_orange_deep, $color_red);

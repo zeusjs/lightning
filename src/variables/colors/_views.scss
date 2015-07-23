@@ -1,0 +1,14 @@
+// Views
+$color_view_bg: #f3f7f9; //#f3f7f9; //#f8f4ee #f7f3ed  #f9f5ef
+$color_view_header_bg: white; //#e3ded6
+$color_view_tab_borders: darken($color_view_header_bg, 15%);
+
+$color_xs_view_header: $color_base_theme;
+$color_xs_view_header_text: white;
+
+
+$color_view_filter_bg: darken($color_view_bg, 3.333%); //#F6EBE9
+
+$color_view_report_page_subheading: $color_blue_grey;
+$color_view_notification_label: $color_blue_grey;
+$color_view_notification_bg: $color_blue_lighter;

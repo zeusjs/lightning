@@ -1,0 +1,124 @@
+.btn.btn-nofill
+{
+    &:active, &:hover, &:focus
+    {
+        color: whiteSmoke !important;
+    }
+}
+
+@include btn_nofill_variant(primary, $brand-primary);
+@include btn_nofill_variant(info, $brand-info);
+@include btn_nofill_variant(success, $brand-success);
+@include btn_nofill_variant(warning, $brand-warning);
+@include btn_nofill_variant(caution, $brand-caution);
+@include btn_nofill_variant(danger, $brand-danger);
+
+
+.btn
+{
+    font-weight: 300;
+    outline: none;
+    transition: background-color .1s ease-in;
+
+    &[disabled] {
+        opacity: 0.40;
+        background-color: white !important;
+        color: $brand-primary !important;
+    }
+}
+
+.btn-overflow-menu,
+.btn-overflow-menu:hover,
+.btn-overflow-menu:focus,
+.btn-overflow-menu:active,
+{
+    border:none;
+    background: transparent;
+    box-shadow: none;
+    color: $color_gray_darker;
+}
+
+// Button with spinner
+.btn-async
+{
+    &.is-loading
+    {
+        cursor: wait;
+
+        .btn-async-spinner
+        {
+            display: block;
+        }
+
+        .btn-async-text
+        {
+            display: none;
+        }
+    }
+}
+
+.btn-async-spinner
+{
+    margin: 0 auto;
+    margin-right: 10px;
+    width: 30px;
+    text-align: center;
+    display: none;
+
+    > div {
+        width: 10px;
+        height: 10px;
+        background-color: $color_white;
+        border: 1px solid;
+        border-radius: 100%;
+        display: inline-block;
+        animation: async_btn_spinner_dots 1.4s infinite ease-in-out;
+        animation-fill-mode: both;
+
+        &:not(:first-child)
+        {
+            margin-left: 5px;
+        }
+    }
+
+
+    .bounce1 {
+        animation-delay: -0.32s;
+    }
+
+    .bounce2 {
+        animation-delay: -0.16s;
+    }
+
+}
+
+
+@include btn_async_variant("danger", $brand-danger);
+@include btn_async_variant("warning", $brand-warning);
+@include btn_async_variant("success", $brand-success);
+@include btn_async_variant("primary", $brand-primary);
+@include btn_async_variant("caution", $brand-caution);
+
+
+@media screen and (max-width: $screen-xs-max)
+{
+
+    .btn-header,
+    .btn-header:hover,
+    .btn-header:active,
+    .btn-header:focus
+    {
+        border: none;
+        outline: none;
+        color: $color_xs_view_header_text !important;
+        background-color: transparent !important;
+        padding: 0px;
+        margin: 10px;
+
+        .fa, .glyphicon
+        {
+            font-weight: 200;
+            font-size: 1.4em;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.bulletin
+{
+    display: block;
+    border: 1px solid;
+    padding: 10px;
+    margin: 5px;
+
+    @include make_shadow();
+}
+
+@include bulletin_variant(primary, $brand-primary);
+@include bulletin_variant(warning, $brand-warning);
+@include bulletin_variant(danger, $brand-danger);
+@include bulletin_variant(success, $brand-success);
+@include bulletin_variant(caution, $brand-caution);
+@include bulletin_variant(info, $brand-info);

@@ -1,0 +1,10 @@
+input[type=text]
+{
+    transition: background-color .2s ease-in;
+
+    &.ng-invalid
+    {
+        background-color: $brand-danger;
+        color: $color_white;
+    }
+}

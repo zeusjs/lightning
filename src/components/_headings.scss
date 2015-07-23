@@ -1,0 +1,58 @@
+
+h1 {
+    margin: 0px;
+    padding: 10px 0px 10px 0px;
+    font-weight: 200;
+    font-size: 1.6em;
+}
+
+h2 {
+    font-size: 1.4em;
+    &.heading-light
+    {
+        font-weight: 200;
+    }
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+    font-weight: 700;
+    color: $color_gray_dark;
+}
+
+h5
+{
+    font-size: 0.85em;
+    display: block;
+    border-bottom: 1px solid #EDEDED;
+    color: #AAA;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+
+
+/* XS */
+@media screen and (max-width: $screen-xs-max)
+{
+
+    h2
+    {
+        font-size: 1.2em
+    }
+
+    h3
+    {
+        font-size: 1.1em;
+    }
+
+    h4
+    {
+        font-size: 1.05em;
+    }
+}

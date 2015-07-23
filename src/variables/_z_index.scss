@@ -1,0 +1,28 @@
+// Private variables
+$_z_idx_0: 0;
+$_z_idx_1: 100;
+$_z_idx_2: 200;
+$_z_idx_3: 300;
+$_z_idx_4: 400;
+$_z_idx_5: 500;
+$_z_idx_6: 600;
+
+
+$z_idx_user_profile_mask: $_z_idx_6;
+
+// Components
+$zidx_node_role_hover_parent: $_z_idx_0;
+$zidx_node_role_hover: $_z_idx_0 + 1;
+$zidx_hero_base: $_z_idx_0;
+$zidx_hero_content: $zidx_hero_base + 1;
+
+// page
+$zidx_view_tabs: $_z_idx_1 + 1;
+$zidx_view_header: $_z_idx_1 + 2;
+
+// left nav
+$zidx_left_nav_mask: $_z_idx_4 + 1;
+$zidx_left_nav_ctrl: $_z_idx_4 + 2;
+$zidx_left_nav_xs_opener: $zidx_left_nav_ctrl + 1;
+$zidx_left_nav_collapse_btn: $zidx_left_nav_ctrl + 2;
+$zidx_left_nav_xs_wrap: $zidx_left_nav_ctrl + 3;

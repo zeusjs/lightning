@@ -1,0 +1,56 @@
+
+.card
+{
+    padding: 0px;
+    border: 1px solid $color_panel_borders;
+    border-radius: $dim_panel_border_radius;
+    margin-bottom: 10px;
+    background-color: $color_white;
+    @include make_shadow();
+
+    .card-head
+    {
+        padding: 2px 5px 2px 2px;
+        background-color: $color_panel_header_bg;
+        border-top-right-radius: $dim_panel_border_radius;
+        border-top-left-radius: $dim_panel_border_radius;
+        border-bottom: 1px solid $color_panel_borders;
+
+        h4
+        {
+            font-size: 1.05em;
+            font-weight: normal;
+            display: inline-block;
+            color: $color_panel_heading_text;
+            padding: 0px 5px 0px 5px;
+        }
+        .icon
+        {
+            font-size: 0.9em;
+            display: inline-block;
+            color: $color_gray;
+            padding: 0px 0px 0px 5px;
+        }
+
+    }
+
+    .card-body
+    {
+        padding: 10px;
+    }
+
+    &.no-head
+    {
+        .card-head
+        {
+            background-color: transparent;
+            border-bottom: 0px;
+        }
+    }
+
+}
+
+.card-simple
+{
+    margin-bottom: 10px;
+}
